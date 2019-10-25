@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+               "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+
+<generatorConfiguration>
+
+    <classPathEntry location="D:/workspace/MybatisDemo/src/config/mybatis-generator-core-1.3.1.jar"/>
+
+    <context id="default" targetRuntime="MyBatis3">
+
+        <jdbcConnection
+                driverClass="com.mysql.jdbc.Driver"
+                connectionURL="jdbc:mysql://localhost:3306/mybatisdemo?useUnicode=true&amp;characterEncoding=UTF-8"
+                userId="root"
+                password="pollex123">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="generator.example" targetProject="MybatisDemo/src">
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="generator" targetProject="MybatisDemo/src">
+        </sqlMapGenerator>
+
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="generator.mapper" targetProject="MybatisDemo/src">
+        </javaClientGenerator>
+
+
+        <table tableName="student" domainObjectName="GeneratorStudent" ></table>
+
+    </context>
+</generatorConfiguration>
